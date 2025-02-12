@@ -1,9 +1,9 @@
 /* Reset default styles */
-body {
+/* body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
-}
+} */
 
 /* Sidebar styles */
 .sidebar {
@@ -13,13 +13,15 @@ body {
     color: white;
     padding-top: 20px;
     position: fixed; /* Sticks to the left */
+    left: 0;
+    top: 0;
 }
 
 /* Sidebar links */
 .sidebar a {
     display: block;
     color: white;
-    padding: 15px;
+    /* padding: 15px; */
     text-decoration: none;
     transition: 0.3s;
 }
@@ -41,13 +43,19 @@ body {
         width: 0;
         overflow: hidden;
         transition: 0.3s;
+        padding: 0;
+        margin: 0;
     }
 
     .sidebar.show {
         width: 250px;
+        padding: 0;
+        margin: 0;
     }
 
     .content {
         margin-left: 0;
+        margin: 0;
+        padding: 0;
     }
 }

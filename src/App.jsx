@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import './App.css'
 // import Sidemenu from "./components/sidemenu"
-// import Sidemenu from "./components/sidemenu"
+import Sidemenu from "./components/sidemenu"
 import Home from "./pages/home"
 import Login from "./pages/login";
 import Create from "./pages/create";
@@ -24,7 +24,7 @@ function App() {
 
   return (
       <Router>
-        {/* <Sidemenu /> */}
+        <Sidemenu />
         <Routes>
           <Route path="/user" element={<Home />} />
           <Route path="/login" element={<Login />} />

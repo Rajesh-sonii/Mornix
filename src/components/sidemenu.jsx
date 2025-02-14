@@ -1,4 +1,6 @@
 import "../styles/sidemenu.css";
+import { useState } from "react";
+
 // import {toggleSidebar} from "../scripts/sidemenu";
 import { ImProfile } from "react-icons/im";
 import { HiMiniEye } from "react-icons/hi2";
@@ -10,9 +12,17 @@ import { MdDownload } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import { IoMdHome } from "react-icons/io";
 import { FaCartArrowDown } from "react-icons/fa";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const Sidemenu = () => {
+
+  const [download, setDownload] = useState(true);
+  const [withdrawn, setWithdrawn] = useState(true);
+  const [transaction, setTransaction] = useState(true);
+  const [income, setIncome] = useState(true);
+  const [task, setTask] = useState(true);
+  const [profile, setProfile] = useState(true);
+  
   return (
     <>
       <div className="sidebar align-items-center justify-content-center">
@@ -30,11 +40,11 @@ const Sidemenu = () => {
         <p className="px-2"><NavLink to="/user"><IoMdHome /> User Dashboard</NavLink></p>
 
         <p className="flex-column gap-1">
-          <a className="bg-transparent p-0 px-2" data-bs-toggle="collapse" href="#collapseProfile" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <ImProfile /> Profile <IoIosArrowDown />
+          <a className="bg-transparent p-0 px-2" onClick={()=>{setProfile(!profile)}} data-bs-toggle="collapse" href="#collapseProfile" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <ImProfile /> Profile { profile ? <IoIosArrowDown /> : <IoIosArrowUp />}
           </a>
         </p>
-        <div className="collapse bg-dark" id="collapseProfile">
+        <div className="collapse" id="collapseProfile" style={{backgroundColor: "#111"}}>
           {/* <div className="card card-body bg-dark">
             Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
           </div> */}
@@ -47,11 +57,11 @@ const Sidemenu = () => {
         <p className="px-2"><NavLink to="/user/bankdetails"><RiBankFill /> Payment Details</NavLink></p>
 
         <p className="flex-column gap-1">
-          <a className="bg-transparent p-0 px-2" data-bs-toggle="collapse" href="#collapseTask" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <HiMiniEye /> My Task <IoIosArrowDown />
+          <a className="bg-transparent p-0 px-2" onClick={()=>{setTask(!task)}} data-bs-toggle="collapse" href="#collapseTask" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <HiMiniEye /> My Task { task ? <IoIosArrowDown /> : <IoIosArrowUp />}
           </a>
         </p>
-        <div className="collapse bg-dark" id="collapseTask">
+        <div className="collapse" id="collapseTask" style={{backgroundColor: "#111"}}>
           {/* <div className="card card-body bg-dark">
             Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
           </div> */}
@@ -65,11 +75,11 @@ const Sidemenu = () => {
         </div>
 
         <p className="flex-column gap-1">
-          <a className="bg-transparent p-0 px-2" data-bs-toggle="collapse" href="#collapseIncome" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <FaIndianRupeeSign /> My Income <IoIosArrowDown />
+          <a className="bg-transparent p-0 px-2" onClick={()=>{setIncome(!income)}} data-bs-toggle="collapse" href="#collapseIncome" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <FaIndianRupeeSign /> My Income { income ? <IoIosArrowDown /> : <IoIosArrowUp />}
           </a>
         </p>
-        <div className="collapse bg-dark" id="collapseIncome">
+        <div className="collapse" id="collapseIncome" style={{backgroundColor: "#111"}}>
           {/* <div className="card card-body bg-dark">
             Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
           </div> */}
@@ -79,11 +89,11 @@ const Sidemenu = () => {
         </div>
 
         <p className="flex-column gap-1">
-          <a className="bg-transparent p-0 px-2" data-bs-toggle="collapse" href="#collapseTransaction" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <FaArrowsRotate /> All Transaction <IoIosArrowDown />
+          <a className="bg-transparent p-0 px-2" onClick={()=>{setTransaction(!transaction)}} data-bs-toggle="collapse" href="#collapseTransaction" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <FaArrowsRotate /> All Transaction { transaction ? <IoIosArrowDown /> : <IoIosArrowUp />}
           </a>
         </p>
-        <div className="collapse bg-dark" id="collapseTransaction">
+        <div className="collapse" id="collapseTransaction" style={{backgroundColor: "#111"}}>
           {/* <div className="card card-body bg-dark">
             Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
           </div> */}
@@ -93,11 +103,11 @@ const Sidemenu = () => {
         </div>
 
         <p className="flex-column gap-1">
-          <a className="bg-transparent p-0 px-2" data-bs-toggle="collapse" href="#collapseWithdraw" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <PiHandWithdrawBold /> Withdrawn <IoIosArrowDown />
+          <a className="bg-transparent p-0 px-2" onClick={()=>{setWithdrawn(!withdrawn)}} data-bs-toggle="collapse" href="#collapseWithdraw" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <PiHandWithdrawBold /> Withdrawn { withdrawn ? <IoIosArrowDown /> : <IoIosArrowUp />}
           </a>
         </p>
-        <div className="collapse bg-dark" id="collapseWithdraw">
+        <div className="collapse" id="collapseWithdraw" style={{backgroundColor: "#111"}}>
           {/* <div className="card card-body bg-dark">
             Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
           </div> */}
@@ -108,11 +118,11 @@ const Sidemenu = () => {
         </div>
 
         <p className="flex-column gap-1">
-          <a className="bg-transparent p-0 px-2" data-bs-toggle="collapse" href="#collapseDownload" role="button" aria-expanded="false" aria-controls="collapseExample">
-            <MdDownload /> Download <IoIosArrowDown />
+          <a className="bg-transparent p-0 px-2" onClick={()=>{setDownload(!download)}} data-bs-toggle="collapse" href="#collapseDownload" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <MdDownload /> Download { download ? <IoIosArrowDown /> : <IoIosArrowUp />}
           </a>
         </p>
-        <div className="collapse bg-dark p-0 m-0" id="collapseDownload">
+        <div className="collapse p-0 m-0" id="collapseDownload" style={{backgroundColor: "#111"}}>
           <ul>
             <li><NavLink>Download Broture</NavLink></li>
           </ul>

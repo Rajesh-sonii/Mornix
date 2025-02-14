@@ -15,9 +15,9 @@ import { IoIosArrowDown } from "react-icons/io";
 const Sidemenu = () => {
   return (
     <>
-      <div className="ps-3 sidebar align-items-center justify-content-center">
+      <div className="sidebar align-items-center justify-content-center">
         <img className="rounded-circle ms-5" style={{ height: "100px", width: "100px" }} src="https://i.pinimg.com/474x/3d/54/c8/3d54c8ccff9a12f747adbe115b3fd459.jpg" alt="logo" />
-        <div className="container d-flex flex-row align-items-center gap-2 mb-4"></div>
+        {/* <div className="container d-flex flex-row align-items-center gap-2 mb-4"></div> */}
         {/* </div> */}
         <div className="container d-flex flex-row align-items-center gap-2 mb-4">
           <img className="rounded-circle" style={{ height: "50px", width: "50px" }} src="https://static.vecteezy.com/system/resources/previews/036/280/650/non_2x/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg" alt="profile-image" />
@@ -31,7 +31,7 @@ const Sidemenu = () => {
 
         <p className="flex-column gap-1">
           <a className="bg-transparent p-0 px-2" data-bs-toggle="collapse" href="#collapseProfile" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <ImProfile /> Profile <IoIosArrowDown />
+            <ImProfile /> Profile <IoIosArrowDown />
           </a>
         </p>
         <div className="collapse bg-dark" id="collapseProfile">
@@ -44,11 +44,11 @@ const Sidemenu = () => {
           </ul>
         </div>
 
-        <p className="px-2"><NavLink to="/user/bankdetails"><RiBankFill/> Payment Details</NavLink></p>
+        <p className="px-2"><NavLink to="/user/bankdetails"><RiBankFill /> Payment Details</NavLink></p>
 
         <p className="flex-column gap-1">
           <a className="bg-transparent p-0 px-2" data-bs-toggle="collapse" href="#collapseTask" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <HiMiniEye /> My Task <IoIosArrowDown />
+            <HiMiniEye /> My Task <IoIosArrowDown />
           </a>
         </p>
         <div className="collapse bg-dark" id="collapseTask">
@@ -66,7 +66,7 @@ const Sidemenu = () => {
 
         <p className="flex-column gap-1">
           <a className="bg-transparent p-0 px-2" data-bs-toggle="collapse" href="#collapseIncome" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <FaIndianRupeeSign /> My Income <IoIosArrowDown />
+            <FaIndianRupeeSign /> My Income <IoIosArrowDown />
           </a>
         </p>
         <div className="collapse bg-dark" id="collapseIncome">
@@ -80,7 +80,7 @@ const Sidemenu = () => {
 
         <p className="flex-column gap-1">
           <a className="bg-transparent p-0 px-2" data-bs-toggle="collapse" href="#collapseTransaction" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <FaArrowsRotate /> All Transaction <IoIosArrowDown />
+            <FaArrowsRotate /> All Transaction <IoIosArrowDown />
           </a>
         </p>
         <div className="collapse bg-dark" id="collapseTransaction">
@@ -94,7 +94,7 @@ const Sidemenu = () => {
 
         <p className="flex-column gap-1">
           <a className="bg-transparent p-0 px-2" data-bs-toggle="collapse" href="#collapseWithdraw" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <PiHandWithdrawBold /> Withdrawn <IoIosArrowDown />
+            <PiHandWithdrawBold /> Withdrawn <IoIosArrowDown />
           </a>
         </p>
         <div className="collapse bg-dark" id="collapseWithdraw">
@@ -109,11 +109,11 @@ const Sidemenu = () => {
 
         <p className="flex-column gap-1">
           <a className="bg-transparent p-0 px-2" data-bs-toggle="collapse" href="#collapseDownload" role="button" aria-expanded="false" aria-controls="collapseExample">
-          <MdDownload /> Download <IoIosArrowDown />
+            <MdDownload /> Download <IoIosArrowDown />
           </a>
         </p>
         <div className="collapse bg-dark p-0 m-0" id="collapseDownload">
-        <ul>
+          <ul>
             <li><NavLink>Download Broture</NavLink></li>
           </ul>
         </div>

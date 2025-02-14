@@ -1,0 +1,9 @@
+.refer-card{
+    width: fit-content;
+}
+
+@media (min-width: 768px){
+    .refer-card{
+        width: 100%;
+    }
+}

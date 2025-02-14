@@ -2,14 +2,14 @@ import ReferCard from "./referCard";
 
 const ReferCardList = () => {
   return (
-    <div className="container m-5 p-5 w-75">
+    <div className="container pt-5">
             <div className="d-flex flex-row align-items-center justify-content-between">
                 <div>Task Overwiew</div>
                 <button className="btn btn-primary ms-3">My Rank 1</button>
             </div>
-            <div className="row mt-5">
+            <div className="overflow-auto mt-5">
                 {data.map((element, i) => {
-                    return <div className="col" key={i}>
+                    return <div className="bg-dark" key={i}>
                         <ReferCard rank={element.rank} name={element.name} totalRefer={element.totalRefer} code={element.code}/>
                     </div>})}
             </div>

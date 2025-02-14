@@ -2,17 +2,7 @@ import PropTypes from 'prop-types';
 
 const Card = (props) => {
     return (
-        // <div className="card">
-        //     <div className="card-header">
-        //         {props.title}
-        //     </div>
-        //     <div className="card-body">
-        //         <img src={props.img} className="card-img" />
-        //         <a href="#" className="btn btn-primary">Go somewhere</a>
-        //     </div>
-        // </div>
-
-        <div className="card text-center" style={{ width: "15rem" }}>
+        <div className="card text-center" style={{ width: "13rem" }}>
             <div className="card-header">
                 {props.title}
             </div>

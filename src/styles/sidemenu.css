@@ -7,7 +7,7 @@
 
 /* Sidebar styles */
 .sidebar {
-    width: 250px;
+    width: 20%;
     height: 100vh; /* Full height */
     background-color: #111;
     color: white;
@@ -15,6 +15,7 @@
     position: fixed; /* Sticks to the left */
     left: 0;
     top: 0;
+    overflow:scroll ;
 }
 
 /* Sidebar links */
@@ -32,10 +33,10 @@
 }
 
 /* Content section */
-.content {
+/* .content {
     margin-left: 260px; /* Adjust margin to match sidebar width */
-    padding: 20px;
-}
+    /* padding: 20px; */
+/* } */ 
 
 /* Hide sidebar by default on small screens */
 @media (max-width: 768px) {

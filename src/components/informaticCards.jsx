@@ -2,7 +2,7 @@ import InfoCard from "./infoCard"
 
 const InformaticCards = () => {
   return (
-    <div className="container m-5 p-5 w-75">
+    <div className="container p-5 mt-0">
                 <div className="d-flex flex-row align-items-center justify-content-between">
                     <div>Task Overwiew</div>
                 </div>

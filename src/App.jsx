@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import './App.css'
+import './App.css'
 // import Sidemenu from "./components/sidemenu"
 import Sidemenu from "./components/sidemenu"
 import Home from "./pages/home"
@@ -23,27 +23,31 @@ import ViewWithdrawTransaction from "./pages/viewWithdrawTransaction"
 function App() {
 
   return (
-      <Router>
-        <Sidemenu />
-        <Routes>
-          <Route path="/user" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/create" element={<Create />} />
-          <Route path="/user/bankdetails" element={<BankDetails />} />
-          <Route path="/user/taskhistory" element={<TaskHistory />} />
-          <Route path="/user/myreferlist" element={<MyReferList />} />
-          <Route path="/user/crdrbalance" element={<CrdrBalance />} />
-          <Route path="/user/dataentrytask" element={<DataEntryTask />} />
-          <Route path="/user/updateprofile" element={<UpdateProfile />} />
-          <Route path="/user/changePassword" element={<ChangePassword />} />
-          <Route path="/user/addwithdrawreq" element={<AddWithdrawReq />} />
-          <Route path="/user/viewlatesttask" element={<ViewLatestTask />} />
-          <Route path="/user/upcomingprojects" element={<UpcomingProjects />} />
-          <Route path="/user/captchaentrytask" element={<CaptchaEntryTask />} />
-          <Route path="/user/socialmediaearning" element={<SocialMediaEarning />} />
-          <Route path="/user/viewwithdrawtransaction" element={<ViewWithdrawTransaction />} />
-        </Routes>
-      </Router>
+    <Router>
+      <div className="main-container">
+            <Sidemenu />
+          <div className="main-content" style={{ marginLeft: "20%" }}>
+              <Routes>
+                <Route path="/user" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/create" element={<Create />} />
+                <Route path="/user/bankdetails" element={<BankDetails />} />
+                <Route path="/user/taskhistory" element={<TaskHistory />} />
+                <Route path="/user/myreferlist" element={<MyReferList />} />
+                <Route path="/user/crdrbalance" element={<CrdrBalance />} />
+                <Route path="/user/dataentrytask" element={<DataEntryTask />} />
+                <Route path="/user/updateprofile" element={<UpdateProfile />} />
+                <Route path="/user/changePassword" element={<ChangePassword />} />
+                <Route path="/user/addwithdrawreq" element={<AddWithdrawReq />} />
+                <Route path="/user/viewlatesttask" element={<ViewLatestTask />} />
+                <Route path="/user/upcomingprojects" element={<UpcomingProjects />} />
+                <Route path="/user/captchaentrytask" element={<CaptchaEntryTask />} />
+                <Route path="/user/socialmediaearning" element={<SocialMediaEarning />} />
+                <Route path="/user/viewwithdrawtransaction" element={<ViewWithdrawTransaction />} />
+              </Routes>
+            </div>
+          </div>
+    </Router>
   )
 }
 

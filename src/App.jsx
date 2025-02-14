@@ -26,7 +26,7 @@ function App() {
     <Router>
       <div className="main-container">
             <Sidemenu />
-          <div className="main-content" style={{ marginLeft: "20%" }}>
+          <div className="main-content">
               <Routes>
                 <Route path="/user" element={<Home />} />
                 <Route path="/login" element={<Login />} />

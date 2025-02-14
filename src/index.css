@@ -1,5 +1,9 @@
 ::-webkit-scrollbar{
-  width: 10px;
+  width: 0;
+}
+
+#root{
+  width: 100%;
 }
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

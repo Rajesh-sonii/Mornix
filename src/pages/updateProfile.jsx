@@ -31,15 +31,18 @@ const UpdateProfile = () => {
   ];
 
   return (
-    <div className="container" style={{width: "fit-content"}}> {/* Removed unnecessary d-flex and row here */}
-      <div className="row"> {/* Main row for the two columns */}
-        <div className="col-xl-6 col-12"> {/* Table column, takes full width on smaller screens */}
-          <div className="table-responsive p-5 bg-dark" style={{ minWidth: "500px", maxWidth: '100%', width: "100%" }}>
-            <table className="table table-bordered table-dark"> {/* Added table-dark for better contrast */}
+    <div className="container"> {/* Removed unnecessary d-flex and row here */}
+      <div className="row table-form"> {/* Main row for the two columns */}
+
+        {/* table starts from here */}
+        <div className="col-xl-6 col-md-12 col-sm-12 p-5"> {/* Table column, takes full width on smaller screens */}
+          <div className="table-responsive p-0">
+            <table className="table table-bordered"> {/* Added table-dark for better contrast */}
+
               <thead>
                 <tr className="text-center">
-                  <th scope="col">Title</th>
-                  <th scope="col">Value</th>
+                  <th scope="col bg-dark">Title</th>
+                  <th scope="col bg-dark">Value</th>
                 </tr>
               </thead>
 
@@ -51,95 +54,64 @@ const UpdateProfile = () => {
                   </tr>
                 ))}
               </tbody>
+
             </table>
           </div>
-</div>
-          <div className="col-xl-6 col-md-6"> {/* Form column */}
-            <div className="p-5">
-              <form onSubmit={handleSubmit}>
+        </div>
 
+        {/* form starts from here  */}
+        <div className="col-xl-6 col-md-12 col-sm-12 p-5 border border-dark"> {/* Form column */}
+          <div className="p-3">
+            <h5 className='d-flex justify-content-center'>Update your details</h5>
+            <form onSubmit={handleSubmit}>
 
-                <div className="mb-3">
-                  <label htmlFor="mobile" className="form-label">Mobile</label>
-                  <input
-                    type="tel"
-                    className="form-control"
-                    id="mobile"
-                    name="mobile"
-                    value={formData.mobile}
-                    onChange={handleChange}
-                    required
-                  />
+              <div className="row mb-3">
+                <label htmlFor="colFormLabelSm" className="col-sm-2 col-form-label col-form-label-sm">Phone</label>
+                <div className="col-sm-10">
+                  <input type="phone" className="form-control" id="colFormLabel" placeholder="00000-00000" />
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="fullName" className="form-label">Full Name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="fullName"
-                    name="fullName"
-                    value={formData.fullName}
-                    onChange={handleChange}
-                    required
-                  />
+              </div>
+              <div className="row mb-3">
+                <label htmlFor="colFormLabelSm" className="col-sm-2 col-form-label col-form-label-sm">Full Name</label>
+                <div className="col-sm-10">
+                  <input type="text" className="form-control" id="colFormLabel" placeholder="write somethig here..." />
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="email" className="form-label">Email</label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
+              </div>
+              <div className="row mb-3">
+                <label htmlFor="colFormLabelSm" className="col-sm-2 col-form-label col-form-label-sm">Email</label>
+                <div className="col-sm-10">
+                  <input type="email" className="form-control" id="colFormLabel" placeholder="example@example.com" />
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="state" className="form-label">State</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="state"
-                    name="state"
-                    value={formData.state}
-                    onChange={handleChange}
-                    required
-                  />
+              </div>
+              <div className="row mb-3">
+                <label htmlFor="colFormLabelSm" className="col-sm-2 col-form-label col-form-label-sm">State</label>
+                <div className="col-sm-10">
+                  <input type="text" className="form-control" id="colFormLabel" placeholder="write something here..." />
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="dob" className="form-label">Date of Birth</label>
-                  <input
-                    type="date"
-                    className="form-control"
-                    id="dob"
-                    name="dob"
-                    value={formData.dob}
-                    onChange={handleChange}
-                    required
-                  />
+              </div>
+              <div className="row mb-3">
+                <label htmlFor="colFormLabelSm" className="col-sm-2 col-form-label col-form-label-sm">DoB</label>
+                <div className="col-sm-10">
+                  <input type="date" className="form-control" id="colFormLabel" />
                 </div>
-                <div className="mb-3">
-                  <label htmlFor="address" className="form-label">Address</label>
-                  <textarea
-                    className="form-control"
-                    id="address"
-                    name="address"
-                    rows="3"
-                    value={formData.address}
-                    onChange={handleChange}
-                    required
-                  ></textarea>
+              </div>
+              <div className="row mb-3">
+                <label htmlFor="colFormLabelSm" className="col-sm-2 col-form-label col-form-label-sm">Address</label>
+                <div className="col-sm-10">
+                  <input type="textarea" className="form-control" id="colFormLabel" placeholder="write something here..." />
                 </div>
+              </div>
 
-                <button type="submit" className="btn btn-primary">Submit</button>
-              </form>
-            </div>
+              <div className="d-flex justify-content-center">
+                <button type="submit" className="btn btn-primary btn-sm px-5">Submit</button>
+              </div>
+
+            </form>
           </div>
         </div>
-      </div>
-      //  </div>
 
+      </div> {/* row */}
+    </div> // container
   )
 }
 

@@ -1,0 +1,9 @@
+.table-form{
+    width: 65rem !important;
+}
+
+@media screen and (max-width: 768px) {
+    .table-form{
+        width: auto !important;
+    }
+}

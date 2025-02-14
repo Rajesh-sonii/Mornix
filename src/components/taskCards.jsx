@@ -2,14 +2,15 @@ import Card from "../components/card"
 
 const TaskCards = () => {
     return (
-        <div className="container bg-dark p-5 mt-4">
-            <div className="justify-content-start d-flex flex-row align-items-center">
+        <div className="container bg-dark p-5 mt-4 d-flex row justify-content-center">
+            {/* <div className="justify-content-start d-flex flex-row align-items-center"> */}
+            <div className="col d-flex">
                 <div className="text-white">Task Overwiew</div>
                 <button className="btn btn-primary btn-sm ms-3">click me</button>
             </div>
             <div className="row mt-5 flex justify-content-center align-items-center">
                 {data.map((element, i) => {
-                    return <div className="col" key={i}>
+                    return <div className="col p-2" key={i}>
                         <Card img={element.img} link={element.link} text={element.text} title={element.title} />
                     </div>})}
             </div>
